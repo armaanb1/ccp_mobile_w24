@@ -11,44 +11,45 @@ h1, h2, p, img, div, footer p {
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 42px; /* Original size, consider if you want this reduced initially */
     text-align: center;
     padding: 15px;
 }
 
 h2 {
-    font-size: 30px; 
+    font-size: 30px; /* Original size, consider if you want this reduced initially */
     color: #0D0D0D;
 }
 
 p, nav ul li a {
-    font-size: 24px;
+    font-size: 24px; /* Original size, consider if you want this reduced initially */
     padding: 10px;
 }
 
 img {
-    width: 100%; 
+    width: 100%;
     max-width: 400px;
     display: block;
     border: 5px solid white;
     margin: auto;
 }
 
+/* Adjusting for not just "small screens" but also optimizing for readability on larger screens */
 @media (max-width: 2000px) {
     h1 {
-        font-size: 32px; 
+        font-size: 32px; /* Slightly reduced from original for better hierarchy */
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 24px; /* Adjusted to ensure hierarchy is maintained */
     }
 
     p, nav ul li a {
-        font-size: 20px; 
+        font-size: 20px; /* Adjusted for improved readability and spacing */
     }
 
     .grid-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Simplifies layout for narrower screens */
     }
 
     nav ul {
@@ -56,14 +57,14 @@ img {
     }
 
     nav ul li {
-        padding: 10px 0; 
+        padding: 10px 0; /* Increases clickable area for better navigation */
     }
 
     .grid-item {
-        padding: 15px;
+        padding: 15px; /* Ensures content within grid items has breathing room */
+    }
 
     footer p {
-        font-size: 20px; 
+        font-size: 20px; /* Ensures footer content remains legible */
     }
-}
 }
