@@ -1,13 +1,12 @@
 body {
     font-family: Arial, Verdana;
-    background-color: blue; /* Fixed: Added missing semicolon */
+    background-color: blue;
     color: #000000;
     margin: 20px;
+    line-height: 1.6; 
 }
 
 h1, h2, p, img, div, footer p {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,56 +17,53 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 30px; 
     color: #0D0D0D;
 }
 
-p {
-    font-size: 24px;
+p, nav ul li a {
+    font-size: 24px, increase for readability */
     padding: 10px;
 }
 
 img {
-    width: 400px;
+    width: 100%; /* Ensure images are responsive */
+    max-width: 400px;
     display: block;
     border: 5px solid white;
     margin: auto;
 }
 
-div {
-    min-height: 125px;
-    padding: 20px;
-    border: 3px solid #FFFFFF;
-}
+@media (max-width: 760px) {
+    h1 {
+        font-size: 2rem; 
+    }
 
-.introduction {
-    border-radius: 15px;
-    margin-top: 15px;
-    line-height: 2;
-}
+    h2 {
+        font-size: 24px;
+    }
 
+    p, nav ul li a {
+        font-size: 20px; /* 20px, ensuring text remains legible */
+    }
 
-footer {
-    background: linear-gradient(0deg, #000000, #0000ff 25%, #0066ff 70%, #000000);
-    border: 5px solid #FFFFFF;
-}
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack elements on smaller screens */
+    }
 
-footer p {
-    font-size: 20px;
-    text-align: right;
-    padding: 15px;
-}
+    nav ul {
+        padding: 0;
+    }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+    nav ul li {
+        padding: 10px 0; /* Increase tap target size for better accessibility */
+    }
 
-.grid-item {
-    background: #f0f0f0; 
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    .grid-item {
+        padding: 15px; /* Ensure content within grid items is not cramped */
+    }
+
+    footer p {
+        font-size: 20rem; /* Ensure footer text is also legible */
+    }
 }
