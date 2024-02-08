@@ -1,8 +1,14 @@
 body {
     font-family: Arial, Verdana;
-    background-color: #f4f4f4; /* Light grey background for a change */
-    color: #333; /* Dark grey color for text */
+    background-color: blue; /* Fixed: Added missing semicolon */
+    color: #000000;
     margin: 20px;
+}
+
+h1, h2, p, img, div, footer p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -13,7 +19,7 @@ h1 {
 
 h2 {
     font-size: 30px;
-    color: #555; /* Slightly lighter grey for headings */
+    color: #0D0D0D;
 }
 
 p {
@@ -24,37 +30,44 @@ p {
 img {
     width: 250px;
     display: block;
-    border: 5px dashed #333; /* Dark grey border for images */
+    border: 5px solid white;
     margin: auto;
 }
 
 div {
     min-height: 125px;
     padding: 20px;
-    border: 2px solid #333; /* Consistent dark grey border for divs */
+    border: 3px solid #FFFFFF;
 }
 
-/* Additional styles for layout and accessibility */
-.skip-link {
-    position: absolute;
-    left: -9999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: -9999;
+.introduction {
+    border-radius: 15px;
+    margin-top: 15px;
+    line-height: 2;
 }
 
-.skip-link:focus {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: auto;
-    height: auto;
+
+footer {
+    background: linear-gradient(0deg, #000000, #0000ff 25%, #0066ff 70%, #000000);
+    border: 5px solid #FFFFFF;
+}
+
+footer p {
+    font-size: 20px;
+    text-align: right;
     padding: 15px;
-    background: #0aaff1; /* Light blue for visibility */
-    color: #fff; /* White color for text */
-    text-align: center;
-    z-index: 9999;
-    border-radius: 0 0 5px 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background: #f0f0f0; 
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }

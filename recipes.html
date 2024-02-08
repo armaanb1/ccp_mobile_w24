@@ -5,42 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Document</title>
+    <title>Recipes</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns of equal size */
+            grid-template-areas:
+                'header header header header'
+                'menu main main main'
+                'footer footer footer footer';
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .header { grid-area: header; }
+        .menu { 
+            grid-area: menu; 
+            /* This column is for the menu */
+        }
+        .main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns within the main area for recipes */
+            gap: 10px;
+        }
+        .footer { grid-area: footer; }
+
+        .grid-container > div, .grid-container > header, .grid-container > nav, .grid-container > main, .grid-container > footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-item {
+            padding: 10px;
+        }
+
+        a.skip-main {
+            position: absolute;
+            left: -999px;
+            top: -999px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        a.skip-main:focus {
+            left: 0;
+            top: 0;
+        }
+
+        nav ul {
+            text-align: left;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            padding: 5px 0; /* Adjust padding as needed */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF; /* Adjust link color as needed */
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    
-    <header>
-        <nav>
+    <a href="#main" class="skip-main">Skip to Main Content</a>
+    <div class="grid-container">
+        <header class="header">Top Three Favorite Recipes</header>
+        <nav class="menu">
             <ul>
-                <li><a href = "#skip">Skip to Main Content</a></li>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "pets.html">Pets</a></li>
-                <li><a href = "recipes.html">Recipes</a></li>
-                <li><a href = "travel.html">Travel</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets.html">Pets</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="travel.html">Travel</a></li>
             </ul>
         </nav>
-    </header>
-    <main id = "skip">
-        <h1>Recipes</h1>
-        <div>
-            <h2>Top Three Favorite Recipes</h2>
-            
-            <h3>Double Chocolate Chip Cookies</h3>
-            
-            <img src="images/double_chocolate_cookies.png" width = "400" alt="Chocolate lovers">
-            <p> Cookies are baked to perfection with a nice crisp exterior along with a gooey interior. If made correctly, these cookies are a perfect combination of chocoalatey, salty, and sweet. </p> 
-            <h4> Mac and Cheese </h4>
-            <img src="images/macandcheese.jpeg" width = "400" alt="mac">
-            <p> This is the cheesiest rendition of this comfort food staple. My family has loved my mac and cheese whenever I make it. </p>
-            <h5> The Ultimate Burger </h5>
-            <img src="images/burger.jpeg" width = "400" alt="Baking ingredients">
-            <p> This burger is juicy and the perfect combination of salty with the crispy bacon, meaty with fresh beef, and sweet given the addition of caramlized onions. </p>
-        
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </main>
+        <main class="main">
+            <div class="grid-item">
+                <h3>Double Chocolate Chip Cookies</h3>
+                <img src="images/double_chocolate_cookies.png" alt="Chocolate lovers">
+                <p>Cookies are baked to perfection with a nice crisp exterior along with a gooey interior. If made correctly, these cookies are a perfect combination of chocolatey, salty, and sweet.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Mac and Cheese</h4>
+                <img src="images/macandcheese.jpeg" alt="mac">
+                <p>This is the cheesiest rendition of this comfort food staple. My family has loved my mac and cheese whenever I make it.</p>
+            </div>
+            <div class="grid-item">
+                <h5>The Ultimate Burger</h5>
+                <img src="images/burger.jpeg" alt="Baking ingredients">
+                <p>This burger is juicy and the perfect combination of salty with the crispy bacon, meaty with fresh beef, and sweet given the addition of caramelized onions.</p>
+            </div>
+        </main>
+        <footer class="footer">By Armaan Bhaskar</footer>
+    </div>
 </body>
 </html>
