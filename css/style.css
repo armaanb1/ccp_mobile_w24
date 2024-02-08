@@ -11,9 +11,9 @@ h1, h2, p, img, div, footer p {
 }
 
 h1 {
-    font-size: 32px; /* Optimized for better readability */
+    font-size: 32px;
     text-align: center;
-    margin-bottom: 20px; /* Add space below the title */
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -22,8 +22,8 @@ h2 {
 }
 
 p, nav ul li a {
-    font-size: 18px; /* Reduced for mobile optimization */
-    padding: 8px; /* Adjusted padding for better touch interaction */
+    font-size: 18px;
+    padding: 8px;
 }
 
 img {
@@ -31,7 +31,7 @@ img {
     max-width: 400px;
     display: block;
     border: 5px solid white;
-    margin: 10px auto; /* Center images within the content */
+    margin: 10px auto;
 }
 
 .grid-container {
@@ -40,7 +40,7 @@ img {
         'title title'
         'menu main'
         'footer footer';
-    grid-template-columns: 1fr 3fr; /* Adjusts column size ratio */
+    grid-template-columns: .25fr 3fr; 
     gap: 10px;
     background-color: #2196F3;
     padding: 10px;
@@ -48,9 +48,9 @@ img {
 
 .header {
     grid-area: title;
-    text-align: center; 
-    width: 100%; 
-    padding: 20px; 
+    text-align: center;
+    width: 96.5%;
+    padding: 20px;
 }
 
 .menu {
@@ -74,14 +74,14 @@ img {
 }
 
 .grid-item {
-    text-align: center; /* Aligns content text to the left for readability */
+    text-align: left;
     margin: 10px 0;
 }
 
 a.skip-main {
     position: absolute;
     top: -999px;
-    left: -999px; /* Ensure it's off-screen */
+    left: -999px;
     background: #000;
     color: #fff;
     padding: 8px;
@@ -89,7 +89,7 @@ a.skip-main {
 }
 
 a.skip-main:focus {
-    left: 10px; /* Bring into view when focused */
+    left: 10px;
     top: 10px;
 }
 
