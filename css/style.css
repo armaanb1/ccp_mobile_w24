@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     font-family: Arial, Verdana;
     background-color: red;
@@ -33,6 +34,94 @@ img {
     border: 5px solid white;
     margin: 10px auto;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'title title'
+        'menu main'
+        'footer footer';
+    grid-template-columns: .25fr 3fr; 
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.header, .menu, .main, .footer, .grid-container > div, .grid-container > header, .grid-container > nav, .grid-container > main, .grid-container > footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+.grid-item {
+    text-align: left;
+    margin: 10px 0;
+}
+
+a.skip-main {
+    position: absolute;
+    top: -999px;
+    left: -999px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+a.skip-main:focus {
+    left: 10px;
+    top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 10px;
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 28px; /* Slightly smaller to fit mobile screens better */
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p, nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .grid-container {
+        display: block; /* Stack elements vertically on small screens */
+    }
+
+    .header, .menu, .main, .footer, .grid-container > div, .grid-container > header, .grid-container > nav, .grid-container > main, .grid-container > footer {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
+    }
+
+    img {
+        max-width: 100%; /* Ensure images are not larger than the screen */
+    }
+}
+
 
 .grid-container {
     display: grid;
