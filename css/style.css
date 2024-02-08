@@ -22,21 +22,21 @@ h2 {
 }
 
 p, nav ul li a {
-    font-size: 24px, increase for readability */
+    font-size: 24px;
     padding: 10px;
 }
 
 img {
-    width: 100%; /* Ensure images are responsive */
+    width: 100%; 
     max-width: 400px;
     display: block;
     border: 5px solid white;
     margin: auto;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 2000px) {
     h1 {
-        font-size: 2rem; 
+        font-size: 32px; 
     }
 
     h2 {
@@ -44,11 +44,11 @@ img {
     }
 
     p, nav ul li a {
-        font-size: 20px; /* 20px, ensuring text remains legible */
+        font-size: 20px; 
     }
 
     .grid-container {
-        grid-template-columns: 1fr; /* Stack elements on smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     nav ul {
@@ -56,14 +56,14 @@ img {
     }
 
     nav ul li {
-        padding: 10px 0; /* Increase tap target size for better accessibility */
+        padding: 10px 0; 
     }
 
     .grid-item {
-        padding: 15px; /* Ensure content within grid items is not cramped */
-    }
+        padding: 15px;
 
     footer p {
-        font-size: 20rem; /* Ensure footer text is also legible */
+        font-size: 20px; 
     }
+}
 }
