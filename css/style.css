@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Verdana;
+    background-color: #f4f4f4; /* Light grey background for a change */
+    color: #333; /* Dark grey color for text */
+    margin: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    padding: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #555; /* Slightly lighter grey for headings */
+}
+
+p {
+    font-size: 24px;
+    padding: 10px;
+}
+
+img {
+    width: 250px;
+    display: block;
+    border: 5px dashed #333; /* Dark grey border for images */
+    margin: auto;
+}
+
+div {
+    min-height: 125px;
+    padding: 20px;
+    border: 2px solid #333; /* Consistent dark grey border for divs */
+}
+
+/* Additional styles for layout and accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -9999;
+}
+
+.skip-link:focus {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    background: #0aaff1; /* Light blue for visibility */
+    color: #fff; /* White color for text */
+    text-align: center;
+    z-index: 9999;
+    border-radius: 0 0 5px 5px;
+}
