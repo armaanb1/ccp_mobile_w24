@@ -19,6 +19,12 @@ h1 {
 h2 {
     font-size: 24px;
     color: #0D0D0D;
+    text-align: center;
+}
+
+h3, h4, h5{
+    text-align: center;
+    font-size: 18px
 }
 
 p, nav ul li a {
@@ -27,7 +33,7 @@ p, nav ul li a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     max-width: 400px;
     display: block;
     border: 5px solid white;
@@ -117,7 +123,7 @@ nav ul li a {
     }
 
     img {
-        max-width: 100%; /* Ensure images are not larger than the screen */
+        max-width: 100%; 
     }
 }
 
@@ -193,18 +199,19 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #000; 
     display: block;
 }
 
 nav ul li a:link, nav ul li a:visited {
-    text-decoration: none;
-    color: #000000; /* Black color for links that are either unvisited or visited */
-    display: block;
+    color: #000; 
+}
+
+nav ul li a.active {
+    text-decoration: underline;
 }
 
 nav ul li a:hover {
     text-decoration: none;
-    color: #000000; /* Change if you want a different color on hover */
-    font-weight: bold; /* Makes link text bold on hover */
+    font-weight: bold;
 }
