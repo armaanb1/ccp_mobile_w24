@@ -208,7 +208,7 @@ nav ul li a:link, nav ul li a:visited {
 
 nav ul li a.active {
     font-weight: bold;
-    color: red;
+    color: maroon;
 }
 
 nav ul li a:hover {
